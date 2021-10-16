@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ULTA Beauty</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <div class="logo">
+                <img src="./assets/images/HEADER-LOGO_IMG-en-us-1587415346302.svg" alt="">
+            </div>
+            <div>
+                <label for="name">Your Name:</label>
+                <input type="text" name="name" id="name" required onkeyup="myFunction()">
+            </div>
+            <div>
+                <label for="email">Your Email:</label>
+                <input type="email" name="email" id="email" required onkeyup="myFunction()">
+            </div>
+            <div>
+                <label for="id">Your ID:</label>
+                <input type="number" name="id" id="id" required onkeyup="myFunction()">
+            </div>
+            <div>
+                <label for="pick-dc">Pick the DC to Refer to:</label>
+                <select name="pick-dc" id="pick-dc" onchange="myFunction()">
+                    <option value="Chambersburg,Pennsylvania,United%20States">Chambersburg, Pennsylvania, United States</option>
+                    <option value="Dallas,Texas,United%20States">Dallas, Texas, United States</option>
+                    <option value="Fresno,California,United%20States">Fresno, California, United States</option>
+                    <option value="Greenwood,Indiana,United%20States">Greenwood, Indiana, United States</option>
+                    <option value="Jacksonville,Florida,United%20States">Jacksonville, Florida, United States</option>
+                    <option value="Romeoville,Illinois,United%20States">Romeoville, Illinois, United States</option>
+                </select>
+            </div>
+            <div class="bottom-section">
+                <a href="javascript:;" onclick="link()" id="link" target="">Your Personal Sharable Referral Link</a>
+                <div class="link-button">
+                    <button onclick="copyLink()">Copy Referral Link</button>
+                    <img id="shareBtn" src="./assets/images/D7DA85DE-3673-42A8-B32D-EBD412852874.png" alt="">
+                </div>
+                <input type="text" readonly id="copyLink">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
