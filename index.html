@@ -13,19 +13,23 @@
                 <img src="./assets/images/HEADER-LOGO_IMG-en-us-1587415346302.svg" alt="">
             </div>
             <div>
-                <label for="name">Your Name:</label>
+                <h2>Welcome!</h2>
+                <h1>Distribution Center Employee Referrals</h1>
+            </div>
+            <div>
+                <label for="name">Your fullname*</label>
                 <input type="text" name="name" id="name" required onkeyup="myFunction()">
             </div>
             <div>
-                <label for="email">Your Email:</label>
+                <label for="email">Email address*</label>
                 <input type="email" name="email" id="email" required onkeyup="myFunction()">
             </div>
             <div>
-                <label for="id">Your ID:</label>
+                <label for="id">Your ID number*</label>
                 <input type="number" name="id" id="id" required onkeyup="myFunction()">
             </div>
             <div>
-                <label for="pick-dc">Pick the DC to Refer to:</label>
+                <label for="pick-dc">Pick the DC to Refer to*</label>
                 <select name="pick-dc" id="pick-dc" onchange="myFunction()">
                     <option value="Chambersburg,Pennsylvania,United%20States">Chambersburg, Pennsylvania, United States</option>
                     <option value="Dallas,Texas,United%20States">Dallas, Texas, United States</option>
@@ -36,11 +40,15 @@
                 </select>
             </div>
             <div class="bottom-section">
-                <a href="javascript:;" onclick="link()" id="link" target="">Your Personal Sharable Referral Link</a>
                 <div class="link-button">
-                    <button onclick="copyLink()">Copy Referral Link</button>
-                    <img id="shareBtn" src="./assets/images/D7DA85DE-3673-42A8-B32D-EBD412852874.png" alt="">
+                    <button onclick="copyLink()">Your Personal Sharable Referral Link</button>
+                    <div class="share-button" id="shareBtn">
+                        <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.5754 24H3.7123C1.66528 24 0 22.3178 0 20.25V7.54688C0 5.47906 1.66528 3.79688 3.7123 3.79688H12.5754C14.6224 3.79688 16.2877 5.47906 16.2877 7.54688V20.25C16.2877 22.3178 14.6224 24 12.5754 24ZM3.7123 5.67188C2.68888 5.67188 1.85615 6.51306 1.85615 7.54688V20.25C1.85615 21.2838 2.68888 22.125 3.7123 22.125H12.5754C13.5988 22.125 14.4316 21.2838 14.4316 20.25V7.54688C14.4316 6.51306 13.5988 5.67188 12.5754 5.67188H3.7123ZM20 17.9062V3.75C20 1.68219 18.3347 0 16.2877 0H5.98608C5.47346 0 5.058 0.419678 5.058 0.9375C5.058 1.45532 5.47346 1.875 5.98608 1.875H16.2877C17.3111 1.875 18.1439 2.71619 18.1439 3.75V17.9062C18.1439 18.4241 18.5593 18.8438 19.0719 18.8438C19.5845 18.8438 20 18.4241 20 17.9062Z" fill="#8A8A8A"/>
+                        </svg>
+                    </div>
                 </div>
+                <a href="javascript:;" onclick="link()" id="link" target="">Your Personal Sharable Referral Link</a>
                 <input type="text" readonly id="copyLink">
             </div>
         </div>
