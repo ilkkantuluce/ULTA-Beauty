@@ -71,8 +71,7 @@ input {
     color: #494949;
 }
 
-input:focus,
-select:focus {
+input:focus {
     border: 1px solid #FF6B06 !important;
     box-shadow: 0px 4px 10px 3px rgb(0 0 0 / 11%) !important;
     border-radius: 6px;
@@ -84,6 +83,8 @@ select {
     height: 64px;
     border-radius: 6px;
     outline: none;
+    background-color: white;
+    color: #494949;
 }
 
 a {
