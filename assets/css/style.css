@@ -68,11 +68,13 @@ input {
     border-radius: 6px;
     border: 1px solid #8692A6;
     outline: none;
+    color: #494949;
 }
 
-input:focus {
-    border: 1px solid #FF6B06;
-    box-shadow: 0px 4px 10px 3px rgb(0 0 0 / 11%);
+input:focus,
+select:focus {
+    border: 1px solid #FF6B06 !important;
+    box-shadow: 0px 4px 10px 3px rgb(0 0 0 / 11%) !important;
     border-radius: 6px;
 }
 
@@ -81,6 +83,7 @@ select {
     width: 100%;
     height: 64px;
     border-radius: 6px;
+    outline: none;
 }
 
 a {
@@ -112,10 +115,10 @@ a {
     align-content: center;
     align-items: center;
     margin-top: 50px;
+    cursor: pointer;
 }
 
 .link-button .share-button{
-    cursor: pointer;
     width: 87px;
     border-radius: 0px 6px 6px 0px;
     background: #F4F6F8;
@@ -133,13 +136,182 @@ a {
     height: 45px;
 }
 
+.share-link {
+    border: 1px solid #FF6B06;
+    border-radius: 4.38853px;
+    background-color: white;
+    height: 43.99px;
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+    color: #FF6B06;
+    font-size: 12px;
+    line-height: 14px;
+    display: none;
+}
+
+
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none;
+}
+
+.select-selected {
+    height: 64px;
+    border-radius: 6px;
+    border: 1px solid #8692A6;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: white;
+    border: 1px solid #8692A6;
+    color: #494949;
+}
+
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 25px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/chevron_right.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(-180deg);
+}
+
+.select-selected.select-arrow-active:after {
+    top: 25px;
+    transform: rotate( 0deg);
+}
+
+.select-items div,.select-selected {
+  cursor: pointer;
+  user-select: none;
+}
+
+.select-items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background: #FFFFFF;
+    border: 1px solid #8692A6;
+    box-sizing: border-box;
+    border-radius: 0px 0px 6px 6px;
+}
+
+.select-items div {
+    padding: 10px 33px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #494949;
+    position: relative;
+}
+
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.same-as-selected:before {
+    position: absolute;
+    content: "";
+    top: 8px;
+    left: 7px;
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/done.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
 @media screen and (max-width: 500px){
     select {
         width: 100%;
     }
 
+    .custom-select select {
+        display: block;
+    }
+
+    .select-selected {
+        display: none;
+    }
+
+    .share-link {
+        display: block;
+    }
+
     .container {
-        width: 80%;
+        width: 95%;
         margin: auto;
+    }
+
+    .form {
+        padding: 25px;
+        padding-bottom: 0px;
+    }
+
+    .head {
+        text-align: center;
+    }
+
+    #copyLink {
+        height: 0px;
+    }
+
+    a {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    h1 {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    h2 {
+        font-size: 14px;
+        line-height: 21px;
+        margin-bottom: 10px;
+    }
+
+    label {
+        font-weight: 500;
+        font-size: 11.7027px;
+        line-height: 14px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    input,
+    select {
+        height: 46.81px;
+    }
+
+    .link-button {
+        margin-top: 20px;
+    }
+
+    .link-button button {
+        font-size: 12px;
+        line-height: 14px;
+        height: 44px;
+    }
+
+    .link-button .share-button {
+        height: 44px;
     }
 }
