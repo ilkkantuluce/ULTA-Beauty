@@ -152,103 +152,11 @@ a {
 }
 
 
-.custom-select {
-  position: relative;
-  font-family: Arial;
-}
-
-.custom-select select {
-  display: none;
-}
-
-.select-selected {
-    height: 64px;
-    border-radius: 6px;
-    border: 1px solid #8692A6;
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
-    background: white;
-    border: 1px solid #8692A6;
-    color: #494949;
-}
-
-.select-selected:after {
-    position: absolute;
-    content: "";
-    top: 25px;
-    right: 20px;
-    width: 20px;
-    height: 20px;
-    background-image: url(../images/chevron_right.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    transform: rotate(-180deg);
-}
-
-.select-selected.select-arrow-active:after {
-    top: 25px;
-    transform: rotate( 0deg);
-}
-
-.select-items div,.select-selected {
-  cursor: pointer;
-  user-select: none;
-}
-
-.select-items {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 99;
-    background: #FFFFFF;
-    border: 1px solid #8692A6;
-    box-sizing: border-box;
-    border-radius: 0px 0px 6px 6px;
-}
-
-.select-items div {
-    padding: 10px 33px;
-    font-size: 14px;
-    line-height: 17px;
-    color: #494949;
-    position: relative;
-}
-
-.select-hide {
-  display: none;
-}
-
-.select-items div:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.same-as-selected:before {
-    position: absolute;
-    content: "";
-    top: 8px;
-    left: 7px;
-    width: 20px;
-    height: 20px;
-    background-image: url(../images/done.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-}
 
 
 @media screen and (max-width: 500px){
     select {
         width: 100%;
-    }
-
-    .custom-select select {
-        display: block;
-    }
-
-    .select-selected {
-        display: none;
     }
 
     .share-link {
