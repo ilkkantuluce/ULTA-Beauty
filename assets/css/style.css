@@ -85,9 +85,22 @@ select {
     outline: none;
     background-color: white;
     color: #494949;
+    border: 1px solid rgb(134, 146, 166);
 }
 
-a {
+span {
+    color: #5d5d5d;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    display: block;
+    font-size: 14px;
+}
+
+span a {
+    color: #5d5d5d;
+}
+
+.link {
     color: #8692A6;
     text-decoration: underline;
     font-size: 18px;
